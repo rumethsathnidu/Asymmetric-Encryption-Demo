@@ -1,0 +1,180 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  background: #fff;
+  margin-top: 32px;
+  padding: 24px 12px 18px 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  max-width: 900px;
+  width: 98vw;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+}
+.panel {
+  background: #f9f9fb;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  padding: 20px 16px 16px 16px;
+  min-width: 320px;
+  max-width: 400px;
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.panel-title {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 1.2em;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.info {
+  font-size: 0.97em;
+  color: #555;
+  margin-bottom: 10px;
+}
+.output {
+  background: #f4f4f4;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  padding: 8px;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 0.97em;
+  word-break: break-all;
+  margin-bottom: 8px;
+  max-height: 120px;
+  overflow: auto;
+}
+.output.hide {
+  display: none;
+}
+.show-hide {
+  color: #007bff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95em;
+  margin-bottom: 8px;
+  padding: 0;
+  text-decoration: underline;
+}
+label {
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  display: block;
+}
+textarea, input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  resize: vertical;
+}
+button.action {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  transition: background 0.2s;
+}
+button.action:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+.copy-btn {
+  background: #eee;
+  color: #333;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95em;
+  padding: 4px 10px;
+  margin-left: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.copy-btn:active {
+  background: #d0e6ff;
+}
+.preview-toggle {
+  color: #007bff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95em;
+  margin-bottom: 8px;
+  padding: 0;
+  text-decoration: underline;
+  margin-left: 6px;
+}
+.preview-box {
+  background: #f8faff;
+  border: 1px solid #cce3ff;
+  border-radius: 5px;
+  padding: 8px 10px;
+  font-size: 0.97em;
+  margin-bottom: 8px;
+  display: none;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  white-space: pre-wrap;
+}
+.status {
+  margin-top: 6px;
+  font-size: 0.97em;
+  color: #007bff;
+  display: flex;
+  align-items: center;
+}
+.status.error {
+  color: #e74c3c;
+}
+.icon {
+  font-size: 1.1em;
+  margin-right: 6px;
+}
+.reset-btn {
+  background: #e74c3c;
+  margin-top: 18px;
+  width: 100%;
+}
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 18px;
+    max-width: 98vw;
+  }
+  .panel {
+    min-width: 0;
+    max-width: 98vw;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 4px 0;
+    margin-top: 10px;
+  }
+  .panel {
+    padding: 12px 4px 8px 4px;
+  }
+} 
